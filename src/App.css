@@ -1,0 +1,156 @@
+/* ==================== */
+/* KODE UNTUK NAVBAR */
+/* ==================== */
+
+#logo:hover{
+  color: #007bff;
+}
+.btnCustom{
+  display: none;
+}
+
+.navlink .active-link {
+  color: #007bff;
+  border-bottom: 4px solid #007bff;
+}
+.navlink a {
+  border-bottom: 4px solid transparent;
+  color: #000; 
+  transition: border-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}  
+.navlink a:hover {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+@media (max-width: 1000px) {
+  .form-control {
+    width: 50%;
+    margin: auto;
+  }
+  .btnMain {
+    display: none; 
+  }
+  .btnCustom{
+    display: block;
+  }
+  .card-title{
+    font-size: smaller;
+  }
+  .card-text{
+    display: none;
+  }
+}
+
+/* ===================================== */
+/* KODE UNTUK CUSTOM GRID CARD NEWS */
+/* ===================================== */
+
+.news-container > .news-item:first-child,
+.news-container > .news-item:last-child {
+  flex: 0 0 100%; 
+  max-width: 100%;
+}
+.news-container > .news-item:nth-child(n+2):nth-last-child(n+2) {
+  flex: 0 0 25%; 
+  max-width: 25%;
+}
+.special-card {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.special-card-content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.special-card-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.special-card-body {
+  flex: 1;
+}
+
+.button{
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+.card {
+  transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(20, 116, 164, 0.2);
+}
+
+.save-icon {
+  width: 20px;
+  height: auto;
+  position: absolute;
+  z-index: 2; 
+  top: 10px;
+  left: 80%;
+  border: none; 
+  border-radius: 10%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8); 
+  transition: background-color 0.3s ease;
+}
+
+.save-icon:hover {
+  background-color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .news-container > .news-item:nth-child(n+2):nth-last-child(n+2) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 1000px) {
+  .special-card {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    width: 100%; 
+  }
+  .special-card-content{
+    display: flex;
+    flex-direction: column;
+  }
+  .special-card-img {
+    width: 90%; 
+    height: 35%;
+    margin-bottom: 1rem; 
+  }
+  .special-card-body {
+    text-align: center;
+    width: 100%;
+  }
+  .special-card-body .d-flex {
+    flex-direction: column;
+  }
+  .special-card-body .btn {
+    margin-bottom: 8px; 
+    width: 100%;
+  }
+
+  .button{
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+}
