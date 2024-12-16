@@ -24,6 +24,13 @@ function News({ multimedia, headline, byline, leadParagraph, url, article, isFir
       : text;
   };
 
+  const formatByline = (text, maxWords) => {
+    const words = text.split(' ');
+    return words.length > maxWords
+      ? words.slice(0, maxWords).join(' ') + ' et al'
+      : text;
+  };
+
   const imageUrl = multimedia?.length
     ? `https://www.nytimes.com/${multimedia[0].url}`
     : 'https://via.placeholder.com/150';
@@ -38,7 +45,7 @@ function News({ multimedia, headline, byline, leadParagraph, url, article, isFir
               <div className="special-card-body ms-3">
                 <h5 className="card-title">{headline}</h5>
                 <p className="card-text">{truncateText(leadParagraph, 70)}</p>
-                {byline && <p className="text-muted small mb-2">{byline}</p>}
+                {byline && <p className="text-muted small mb-2">{formatByline(byline,3)}</p>}
                 <div className="d-flex gap-10 mt-auto justify-content-end">
                   <a href={url} className="btn btn-info me-2" target="_blank" rel="noopener noreferrer">
                     Read More

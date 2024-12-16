@@ -32,7 +32,7 @@ function TopNews({ multimedia, headline, byline, leadParagraph, url, article }) 
     const formatByline = (text, maxWords) => {
       const words = text.split(' ');
       return words.length > maxWords
-        ? words.slice(0, maxWords).join(' ') + 'et al'
+        ? words.slice(0, maxWords).join(' ') + ' et al'
         : text;
     };
   
