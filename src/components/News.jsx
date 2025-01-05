@@ -76,7 +76,7 @@ function News({ multimedia, headline, byline, leadParagraph, url, article, isFir
             </div>
 
             <div className="card-body d-flex flex-column">
-              {byline && <p className="text-muted small mb-2">{formatByline(byline,3)}</p>}
+              {byline && <p className="text-muted small mb-2">{formatByline(byline,2)}</p>}
               <h5 className="card-title">{headline}</h5>
               <p className="card-text">{truncateText(leadParagraph, 20)}</p>
               <div className="button">

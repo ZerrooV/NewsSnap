@@ -154,3 +154,19 @@
     gap: 5px;
   }
 }
+
+
+.custom-carousel {
+  max-width: 650px; 
+  margin: 0 auto;  
+}
+
+.custom-carousel img {
+  object-fit: cover;
+}
+
+@media (max-width : 768px ){
+  .carousel-caption p {
+    display: none;
+  }
+}
